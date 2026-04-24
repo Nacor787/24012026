@@ -1,0 +1,127 @@
+<!-- index.html -->
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>24 ❤️ Nuestro Mes</title>
+
+  <!-- TailwindCSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- Three.js -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r134/three.min.js"></script>
+
+  <!-- Vanta -->
+  <script src="https://cdn.jsdelivr.net/npm/vanta@latest/dist/vanta.stars.min.js"></script>
+
+  <link rel="stylesheet" href="css/loviu.css" />
+</head>
+
+<body id="bg" class="overflow-hidden">
+
+  <!-- LOGIN -->
+  <div id="loginContainer"
+    class="min-h-screen flex items-center justify-center px-4">
+
+    <div class="bg-black/40 backdrop-blur-lg p-6 sm:p-10 rounded-3xl shadow-2xl w-full max-w-md border border-pink-500">
+
+      <h1 class="text-4xl text-center font-bold text-pink-400 mb-4">
+        ❤️ 24/04/2026 ❤️
+      </h1>
+
+      <p class="text-white text-base sm:text-lg md:text-xl leading-8 sm:leading-10">
+        Ingresa nuestra contraseña secreta 💋
+      </p>
+
+      <input
+        type="password"
+        id="password"
+        placeholder="Contraseña..."
+        class="w-full p-3 rounded-xl bg-pink-100 outline-none text-black text-center text-lg"
+      />
+
+      <button
+        onclick="validatePassword()"
+        class="w-full mt-5 bg-pink-500 hover:bg-pink-600 transition-all duration-300 text-white py-3 rounded-xl font-bold text-lg"
+      >
+        Entrar 💖
+      </button>
+
+      <p id="message"
+        class="text-red-400 text-center mt-5 font-bold text-lg">
+      </p>
+    </div>
+  </div>
+
+  <!-- CONTENIDO -->
+  <div id="mainContent"
+    class="hidden min-h-screen flex items-center justify-center relative">
+
+    <!-- ESTRELLAS -->
+    <div class="absolute inset-0 stars"></div>
+
+    <!-- CORAZON -->
+    <div class="relative z-10 flex flex-col items-center">
+
+      <div id="heart"
+        class="heart cursor-pointer animate-pulse">
+      </div>
+
+      <h1 class="mt-10 text-3xl sm:text-5xl md:text-7xl text-red-500 font-extrabold text-center drop-shadow-lg px-4">
+        ❤️ TE AMO ❤️
+      </h1>
+
+      <p class="mt-4 text-pink-100 text-lg sm:text-xl md:text-2xl text-center px-4">
+        ✨ Feliz Aniversario Mi Amor!✨
+      </p>
+
+      <p class="mt-3 text-white text-lg sm:text-xl text-center">
+        💖🤲😘💋🌹✨
+      </p>
+    </div>
+
+    <!-- MENSAJE -->
+    <div id="loveMessage"
+      class="hidden absolute inset-0 bg-black/80 flex items-center justify-center px-6 z-20">
+
+      <div class="bg-pink-500/20 backdrop-blur-lg border border-pink-400 rounded-3xl 
+p-5 sm:p-8 
+w-[95%] sm:w-[85%] md:w-[70%] 
+max-h-[85vh] 
+overflow-y-auto 
+text-center 
+shadow-2xl"">
+
+        <h2 class="text-3xl sm:text-4xl md:text-5xl font-bold text-pink-300 mb-6">
+          💖 Feliz Aniversario Mi Amor💖
+        </h2>
+
+        <p class="text-white text-sm sm:text-base md:text-lg leading-7 sm:leading-9">
+          Mi amor ❤️<br><br>
+
+          Hoy cumplimos nuestro primer mes juntos y quiero decirte
+          que eres una de las personas más especiales de mi vida ✨<br><br>
+
+          Gracias por cada sonrisa 😊, cada beso 😘, cada abrazo 🤗
+          y cada momento hermoso que compartimos 💕<br><br>
+
+          Espero seguir celebrando cada 24 contigo,
+          porque contigo todo se siente más bonito 🌹❤️<br><br>
+
+          Te amo muchísimo mi niña 💋✨
+        </p>
+
+        <button onclick="closeMessage()"
+          class="mt-8 bg-pink-500 hover:bg-pink-600 text-white px-8 py-3 rounded-2xl font-bold text-lg">
+          Cerrar 💖
+        </button>
+
+      </div>
+    </div>
+
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

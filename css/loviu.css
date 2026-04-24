@@ -1,0 +1,140 @@
+/* style.css RESPONSIVE */
+
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background: #000;
+  overflow-x: hidden;
+}
+
+/* ESTRELLAS */
+.stars::before,
+.stars::after {
+  content: "";
+  position: absolute;
+  width: 2px;
+  height: 2px;
+  background: white;
+  box-shadow:
+    5vw 10vh white,
+    15vw 30vh white,
+    30vw 20vh white,
+    50vw 40vh white,
+    70vw 10vh white,
+    80vw 60vh white,
+    90vw 20vh white,
+    25vw 70vh white,
+    45vw 85vh white,
+    60vw 50vh white,
+    75vw 75vh white,
+    95vw 90vh white;
+  animation: twinkle 3s infinite alternate;
+}
+
+@keyframes twinkle {
+  from {
+    opacity: 0.3;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/* CORAZON */
+.heart {
+  position: relative;
+  width: 180px;
+  height: 180px;
+  background: red;
+  transform: rotate(-45deg);
+  box-shadow: 0 0 60px rgba(255, 0, 0, 0.9);
+  transition: 0.4s;
+}
+
+.heart:hover {
+  transform: rotate(-45deg) scale(1.08);
+}
+
+.heart::before,
+.heart::after {
+  content: "";
+  position: absolute;
+  width: 180px;
+  height: 180px;
+  background: red;
+  border-radius: 50%;
+}
+
+.heart::before {
+  top: -90px;
+  left: 0;
+}
+
+.heart::after {
+  left: 90px;
+  top: 0;
+}
+
+/* RESPONSIVE TABLET */
+@media (max-width: 768px) {
+
+  .heart {
+    width: 140px;
+    height: 140px;
+  }
+
+  .heart::before,
+  .heart::after {
+    width: 140px;
+    height: 140px;
+  }
+
+  .heart::before {
+    top: -70px;
+  }
+
+  .heart::after {
+    left: 70px;
+  }
+}
+
+/* RESPONSIVE CELULAR */
+@media (max-width: 480px) {
+
+  .heart {
+    width: 110px;
+    height: 110px;
+  }
+
+  .heart::before,
+  .heart::after {
+    width: 110px;
+    height: 110px;
+  }
+
+  .heart::before {
+    top: -55px;
+  }
+
+  .heart::after {
+    left: 55px;
+  }
+
+  #loveMessage .bg-pink-500\/20 {
+    padding: 25px;
+    width: 95%;
+  }
+
+  #loveMessage h2 {
+    font-size: 2rem !important;
+    line-height: 1.2;
+  }
+
+  #loveMessage p {
+    font-size: 1rem !important;
+    line-height: 2rem !important;
+  }
+
+  input {
+    font-size: 16px !important;
+  }
+}
